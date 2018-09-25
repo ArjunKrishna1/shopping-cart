@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basket Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+</head>
+
+<body class="basket">
+    <header>
+        <h1>Sports Clothing</h1>
+
+    </header>
+    <ul class="products">
+        <li>
+            <img src="img/white.png">
+            <h2>Grey T-shirt</h2>
+            <button><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/white.png">
+            <h2>Grey T-shirt</h2>
+            <button><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/grey.png">
+            <h2>Grey T-shirt</h2>
+            <button><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/grey.png">
+            <h2>Grey T-shirt</h2>
+            <button><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/grey.png">
+            <h2>Grey T-shirt</h2>
+            <button><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+        </li>
+        <li>
+            <img src="img/grey.png">
+            <h2>Grey T-shirt</h2>
+            <button><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+        </li>
+
+    </ul>
+
+
+
+</body>
+<script>
+    $("button").on("click", function() {
+        $(this).closest("li")
+            .find("img")
+            .clone()
+            .addClass("zoom")
+            .appendTo("body");
+        setTimeout(function() {
+            $(".zoom").remove();
+        }, 1000)
+    })
+</script>
+
+</html>
